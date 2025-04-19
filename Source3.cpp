@@ -1,24 +1,21 @@
-#include <iostream>
-#include <fstream>
-#include<string>
+#include<iostream>
 using namespace std;
-void save(string s);
-int main() {
-    string s;
-    cout << "Enter text to save: ";
-    getline(cin, s);
-    save(s);
-    return 0;
+void reverse(int arr[]);
+int main()
+{
+	int ar[7];
+	cout << "enter 7 numbers" << endl;
+	for (int i = 0; i < 7; i++)
+	{
+		cin >> ar[i];
+	}
+
+	reverse(ar);
+	return 0;
 }
-void save(string s) {
-    ofstream fout("output.txt");
-    if (fout.is_open()) {
-        fout << s;
-        fout.close();
-        cout << "Text saved to output.txt" << endl;
-    }
-    else {
-        cout << "Error opening file." << endl;
-    }
+void reverse(int arr[]) {
+	for (int i = 6; i < 0; i--)
+	{
+		cout << "reversed array is" << arr[i];
+	}
 }
- 
